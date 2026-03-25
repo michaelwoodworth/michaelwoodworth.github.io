@@ -247,6 +247,78 @@
 
   .pub-more:hover { opacity: 0.7; }
 
+  /* === REPRODUCIBILITY === */
+  .repro-project {
+    margin-bottom: 2rem;
+  }
+
+  .repro-project h3 {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+  }
+
+  .repro-desc {
+    font-size: 0.92rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    max-width: 640px;
+  }
+
+  .repro-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .repro-link {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--light);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: all 0.3s ease;
+  }
+
+  .repro-link:hover {
+    border-color: var(--accent);
+    background: var(--accent-light);
+  }
+
+  .repro-icon-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+    letter-spacing: -0.03em;
+  }
+
+  .repro-link-label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 500;
+  }
+
+  .repro-link-detail {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--mid);
+    font-weight: 300;
+  }
+
   /* === CONSULTING === */
   .consult-grid {
     display: grid;
@@ -323,7 +395,7 @@
   @media (max-width: 768px) {
     .hero { padding-top: 7rem; }
     .hero h1 { font-size: 2.2rem; }
-    .dual, .research-grid, .consult-grid { grid-template-columns: 1fr; }
+    .dual, .research-grid, .consult-grid, .repro-links { grid-template-columns: 1fr; }
     .pub-list li { grid-template-columns: 1fr; gap: 0.25rem; }
     nav ul { gap: 1rem; }
     nav a { font-size: 0.75rem; }
@@ -406,6 +478,39 @@
   </div>
 </section>
 
+
+<section id="reproducibility">
+  <div class="section-label">Reproducibility</div>
+  <div class="repro-project">
+    <h3>PREMIX</h3>
+    <p class="repro-desc">Elements supporting the published results from the PREMIX phase 1 randomized controlled trial of FMT in renal transplant recipients colonized by multidrug-resistant organisms.</p>
+    <div class="repro-links">
+      <a href="https://github.com/michaelwoodworth/PREMIX" target="_blank" class="repro-link">
+        <span class="repro-icon-text">&lt;/&gt;</span>
+        <span>
+          <span class="repro-link-label">Code</span>
+          <span class="repro-link-detail">GitHub repository</span>
+        </span>
+      </a>
+      <a href="https://doi.org/10.15139/S3/GCV41M" target="_blank" class="repro-link">
+        <span class="repro-icon-text">D</span>
+        <span>
+          <span class="repro-link-label">Metadata</span>
+          <span class="repro-link-detail">UNC Dataverse</span>
+        </span>
+      </a>
+      <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA728680" target="_blank" class="repro-link">
+        <span class="repro-icon-text">S</span>
+        <span>
+          <span class="repro-link-label">Sequences</span>
+          <span class="repro-link-detail">NCBI BioProject PRJNA728680</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
 <section id="publications">
   <div class="section-label">Selected Publications</div>
   <ul class="pub-list">
@@ -440,6 +545,7 @@
   </ul>
   <a href="https://www.ncbi.nlm.nih.gov/myncbi/16ky4nO7lskAz/bibliography/public/" target="_blank" class="pub-more">View all publications on PubMed →</a>
 </section>
+
 
 <section id="consulting">
   <div class="section-label">Areas of Expertise</div>
